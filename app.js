@@ -15,8 +15,9 @@ app.get("/", (req, res) => {
 
 app.get("/dbexample", (req, res) => {
   knex
-    .select()
-    .table("usa")
+    .select("*")
+    .from("usa")
+    .innerJoin("deaths", "usa.uid", "=", "deaths.uid")
     .then((items) => res.json(items));
 });
 
