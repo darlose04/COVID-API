@@ -1,7 +1,7 @@
 require("dotenv").config();
-const knex = require("knex");
+const Knex = require("knex");
 
-const knexDB = knex({
+const knexDB = Knex({
   client: "mysql",
   connection: {
     host: "127.0.0.1",
@@ -11,4 +11,13 @@ const knexDB = knex({
   },
 });
 
-module.exports = knexDB;
+knexDB
+  .select("UID")
+  .from("deaths")
+  .then((rows) => {
+    for (row of rows) {
+      console.log(`${row["UID"]}`);
+    }
+  });
+
+// module.exports = knexDB;
