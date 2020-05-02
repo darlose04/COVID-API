@@ -20,11 +20,11 @@ const knexDB = Knex({
 //     }
 //   });
 
-knexDB
-  .from("usa")
-  .innerJoin("deaths", "usa.uid", "=", "deaths.uid")
-  .then((rows) => {
-    console.log(rows);
-  });
+// knexDB
+//   .from("usa")
+//   .innerJoin("deaths", "usa.uid", "=", "deaths.uid")
+//   .then((rows) => {
+//     console.log(rows);
+//   });
 
-// module.exports = knexDB;
+module.exports = knexDB;
