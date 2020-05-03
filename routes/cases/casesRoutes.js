@@ -10,4 +10,13 @@ router.get("/", (req, res) => {
     .then((items) => res.json(items));
 });
 
+router.get("/states/:name", (req, res) => {
+  knex("usa")
+    .where({
+      State: req.params.name,
+    })
+    .innerJoin("cases", "usa.uid", "cases.uid")
+    .then((items) => res.json(items));
+});
+
 module.exports = router;
