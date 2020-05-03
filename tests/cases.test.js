@@ -2,7 +2,7 @@ const supertest = require("supertest");
 const app = require("../app");
 const api = supertest(app);
 
-describe("test route for all death statistics", () => {
+describe("test route for all cases statistics", () => {
   test("all stats are returned as json", async (done) => {
     console.log("Entered test...");
     await api
