@@ -15,6 +15,6 @@ app.get("/", (req, res) => {
 // Routes for death statistics
 app.use("/api/usa/coronadeaths", require("./routes/deaths/deathRoutes"));
 // Routes for cases statistics
-app.use("/api/usa/coronacases", require("./routes/cases/caseRoutes"));
+app.use("/api/usa/coronacases", require("./routes/cases/casesRoutes"));
 
 module.exports = app;
