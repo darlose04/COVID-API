@@ -9,3 +9,5 @@ router.get("/", (req, res) => {
     .innerJoin("deaths", "usa.uid", "deaths.uid")
     .then((items) => res.json(items));
 });
+
+module.exports = router;
