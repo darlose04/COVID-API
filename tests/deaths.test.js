@@ -1,5 +1,5 @@
 const supertest = require("supertest");
-const ap = require("../app");
+const app = require("../app");
 const api = supertest(app);
 
 describe("test route for all death statistics", () => {
