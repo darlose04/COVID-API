@@ -13,12 +13,7 @@ app.get("/", (req, res) => {
   res.send("<h1>COVID-19 API</h1>");
 });
 
-app.get("/dbexample", (req, res) => {
-  knex
-    .select("*")
-    .from("usa")
-    .innerJoin("deaths", "usa.uid", "=", "deaths.uid")
-    .then((items) => res.json(items));
-});
+// Routes for death statistics
+app.use("/api/usa/coronadeaths", require("./routes/deaths/deathRoutes"));
 
 module.exports = app;
