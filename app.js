@@ -1,7 +1,6 @@
 const express = require("express");
 const cors = require("cors");
 const compression = require("compression");
-const knex = require("./config/database");
 
 // require db, will come from config directory
 
