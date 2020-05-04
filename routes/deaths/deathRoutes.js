@@ -11,10 +11,10 @@ router.get("/", (req, res) => {
 });
 
 // get stats for specific states
-router.get("/states/:name", (req, res) => {
+router.get("/states/:state", (req, res) => {
   knex("usa")
     .where({
-      State: req.params.name,
+      State: req.params.state,
     })
     .innerJoin("deaths", "usa.uid", "deaths.uid")
     .then((items) => res.json(items));
