@@ -31,4 +31,23 @@ router.get("/states/:state/county/:county", (req, res) => {
     .then((items) => res.json(items));
 });
 
+// get all counties that have a greater population than the passed parameter
+router.get("/population/:countypopulation", (req, res) => {
+  knex("usa")
+    .innerJoin("deaths", "usa.uid", "deaths.uid")
+    .andWhere("Population", ">", req.params.countypopulation)
+    .then((items) => res.json(items));
+});
+
+// get counties that have a population greater than the passed parameter
+router.get("/states/:state/:countypopulation", (req, res) => {
+  knex("usa")
+    .innerJoin("deaths", "usa.uid", "deaths.uid")
+    .where({
+      State: req.params.state,
+    })
+    .andWhere("Population", ">", req.params.countypopulation)
+    .then((items) => res.json(items));
+});
+
 module.exports = router;
