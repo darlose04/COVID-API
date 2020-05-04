@@ -18,5 +18,15 @@ router.get("/states/:name", (req, res) => {
     .innerJoin("cases", "usa.uid", "cases.uid")
     .then((items) => res.json(items));
 });
+// get stats for specific counties in specific states
+router.get("/states/:state/county/:county", (req, res) => {
+  knex("usa")
+    .innerJoin("cases", "usa.uid", "cases.uid")
+    .where({
+      County: req.params.county,
+      State: req.params.state,
+    })
+    .then((items) => res.json(items));
+});
 
 module.exports = router;
