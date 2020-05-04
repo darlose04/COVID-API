@@ -10,6 +10,7 @@ router.get("/", (req, res) => {
     .then((items) => res.json(items));
 });
 
+// get stats for specific states
 router.get("/states/:name", (req, res) => {
   knex("usa")
     .where({
