@@ -50,4 +50,8 @@ router.get("/states/:state/:countypopulation", (req, res) => {
     .then((items) => res.json(items));
 });
 
+/*
+POSSIBLY ADD ROUTES THAT GET INFORMATION BASED ON DATE. NOT SURE IF NEEDED THOUGH
+*/
+
 module.exports = router;
