@@ -16,7 +16,7 @@ app.use("/api/usa/coronadeaths", require("./routes/deaths/deathRoutes"));
 app.use("/api/usa/coronacases", require("./routes/cases/casesRoutes"));
 // Routes for daily report
 app.use(
-  "api/usa/dailyreport",
+  "/api/usa/dailyreport",
   require("./routes/dailyReports/dailyReportsRoutes")
 );
 

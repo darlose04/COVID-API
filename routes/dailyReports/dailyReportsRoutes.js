@@ -3,7 +3,7 @@ const router = express.Router();
 const knex = require("../../config/database");
 
 // get all daily reports from table
-router.get("/dailyreport", (req, res) => {
+router.get("/", (req, res) => {
   knex
     .select()
     .table("daily_report")
