@@ -6,7 +6,7 @@ describe("test route for all daily reports statistics", () => {
   test("all stats are returned as json", async (done) => {
     console.log("Entered test...");
     await api
-      .get("/api/usa/dailyreports")
+      .get("/api/usa/dailyreport")
       .expect(200)
       .expect("Content-Type", /application\/json/);
 
