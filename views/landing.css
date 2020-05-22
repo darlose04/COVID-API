@@ -4,6 +4,11 @@
   box-sizing: border-box;
 }
 
+html,
+body {
+  font-family: "Roboto", sans-serif;
+}
+
 .container {
   margin: auto;
   max-width: 1100px;
@@ -29,4 +34,12 @@
   text-align: center;
   border-top: solid red 4px;
   border-bottom: solid red 4px;
+}
+
+.disclaimer p a {
+  color: black;
+}
+
+.disclaimer p a:hover {
+  color: red;
 }
