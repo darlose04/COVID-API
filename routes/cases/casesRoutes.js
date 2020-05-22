@@ -39,7 +39,7 @@ router.get("/population/:countypopulation", (req, res) => {
     .then((items) => res.json(items));
 });
 
-// get counties that have a population greater than the passed parameter
+// get counties that have a population greater than the passed parameter for the state specified
 router.get("/states/:state/:countypopulation", (req, res) => {
   knex("usa")
     .innerJoin("cases", "usa.uid", "cases.uid")
