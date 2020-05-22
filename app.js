@@ -6,6 +6,7 @@ const app = express();
 app.use(cors());
 app.use(compression());
 app.set("view engine", "ejs");
+app.use(express.static(__dirname + "/views"));
 
 app.get("/", (req, res) => {
   res.render("landing");
