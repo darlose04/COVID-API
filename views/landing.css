@@ -39,6 +39,7 @@ body {
 .disclaimer p {
   margin: 10px 0;
   line-height: 1.5em;
+  text-align: center;
 }
 
 .disclaimer p a {
