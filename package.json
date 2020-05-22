@@ -4,8 +4,8 @@
   "description": "An API for COVID-19 statistics",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "watch": "nodemon index.js",
+    "start": "node covIndex.js",
+    "watch": "nodemon covIndex.js",
     "test": "jest --verbose --detectOpenHandles"
   },
   "author": "Zach Smith",
