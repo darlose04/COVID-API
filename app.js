@@ -5,10 +5,11 @@ const compression = require("compression");
 const app = express();
 app.use(cors());
 app.use(compression());
+app.set("view engine", "ejs");
 
-// app.get("/", (req, res) => {
-//   res.send("<h1>COVID-19 API</h1>");
-// });
+app.get("/", (req, res) => {
+  res.render("landing");
+});
 
 // Routes for death statistics
 app.use("/api/usa/coronadeaths", require("./routes/deaths/deathRoutes"));
