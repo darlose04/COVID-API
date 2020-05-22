@@ -113,6 +113,48 @@
             </p>
           </li>
         </ul>
+        <h3>Death Routes</h3>
+        <small>Returns information related to deaths from COVID-19</small>
+        <ul>
+          <li>
+            <em>/api/usa/coronadeaths</em> : This route returns JSON objects for
+            each U.S. territory, as well as objects for each county in every
+            state.
+          </li>
+          <li>
+            <em>/api/usa/coronadeaths/states/:state</em> : This route returns
+            JSON objects for the counties of the state specified in the name
+            parameter.
+            <p>Example: <em>/api/usa/coronadeaths/states/New York</em></p>
+          </li>
+          <li>
+            <em>/api/usa/coronadeaths/states/:state/county/:county</em> : This
+            route returns a JSON object of the specified county of the specified
+            state.
+            <p>
+              Example:
+              <em>/api/usa/coronadeaths/states/Missouri/county/Boone</em>
+            </p>
+          </li>
+          <li>
+            <em>/api/usa/coronadeaths/population/:countypopulation</em> : This
+            route returns JSON objects of all U.S. counties that have a
+            population greater than the passed parameter.
+            <p>
+              Example:
+              <em>/api/usa/coronadeaths/population/150000</em>
+            </p>
+          </li>
+          <li>
+            <em>/api/usa/coronadeaths/states/:state/:countypopulation</em> :
+            This route returns JSON objects of the counties for the specified
+            state that have a population greater than the passed parameter.
+            <p>
+              Example:
+              <em>/api/usa/coronadeaths/states/California/120000</em>
+            </p>
+          </li>
+        </ul>
       </section>
     </div>
   </body>
