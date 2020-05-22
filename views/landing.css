@@ -28,18 +28,19 @@ body {
 
 .disclaimer {
   margin-top: 10px;
+  border-top: solid red 4px;
+  border-bottom: solid red 4px;
 }
 
 .disclaimer h1 {
   text-align: center;
-  border-top: solid red 4px;
+  margin-top: 10px;
 }
 
 .disclaimer p {
   margin: 10px 0;
   line-height: 1.5em;
   text-align: center;
-  border-bottom: solid red 4px;
 }
 
 .disclaimer p a {
