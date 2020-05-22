@@ -33,17 +33,18 @@ body {
 .disclaimer h1 {
   text-align: center;
   border-top: solid red 4px;
-  border-bottom: solid red 4px;
 }
 
 .disclaimer p {
   margin: 10px 0;
   line-height: 1.5em;
   text-align: center;
+  border-bottom: solid red 4px;
 }
 
 .disclaimer p a {
   color: black;
+  text-decoration: none;
 }
 
 .disclaimer p a:hover {
