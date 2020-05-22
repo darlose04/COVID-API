@@ -26,6 +26,8 @@ body {
   height: 70px;
 }
 
+/* Disclaimer Section */
+
 .disclaimer {
   margin-top: 10px;
   border-top: solid red 4px;
@@ -45,9 +47,38 @@ body {
 
 .disclaimer p a {
   color: black;
-  text-decoration: none;
 }
 
 .disclaimer p a:hover {
+  color: red;
+}
+
+/* About Section */
+
+.about {
+  margin: 20px 0;
+  border: 2px solid black;
+  padding: 10px 10px;
+}
+
+.about h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.about ul {
+  list-style: none;
+}
+
+.about ul li {
+  margin: 10px 0;
+  /* border-bottom: 1px solid black; */
+}
+
+.about ul li p a {
+  color: black;
+}
+
+.about ul li p a:hover {
   color: red;
 }
