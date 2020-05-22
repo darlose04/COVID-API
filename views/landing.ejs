@@ -79,12 +79,20 @@
             state.
           </li>
           <li>
-            <em>/api/usa/coronacases/states/:name</em> : This route returns JSON
-            objects for the counties of the state specified in the name
+            <em>/api/usa/coronacases/states/:state</em> : This route returns
+            JSON objects for the counties of the state specified in the name
             parameter.
             <p>Example: <em>/api/usa/coronacases/states/New York</em></p>
           </li>
-          <li></li>
+          <li>
+            <em>/api/usa/coronacases/states/:state/county/:county</em> : This
+            routes returns a JSON object of the specified county of the
+            specified state.
+            <p>
+              Example:
+              <em>/api/usa/coronacases/states/Missouri/county/Boone</em>
+            </p>
+          </li>
         </ul>
       </section>
     </div>
