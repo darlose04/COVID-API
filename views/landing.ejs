@@ -39,7 +39,8 @@
                 href="https://github.com/CSSEGISandData/COVID-19"
                 target="_blank"
                 >here</a
-              >.
+              >. Right now this API only provides information related to
+              COVID-19 statistics in the United States.
             </p>
           </li>
           <li>
@@ -62,6 +63,28 @@
               Knex.js to retrieve information from the database.
             </p>
           </li>
+        </ul>
+      </section>
+      <section class="routes">
+        <h1>API Routes</h1>
+        <p>
+          Information can be retrieved from the following routes with GET
+          requests:
+        </p>
+        <h3>Case Routes</h3>
+        <ul>
+          <li>
+            <em>/api/usa/coronacases</em> : This route returns JSON objects for
+            each U.S. territory, as well as objects for each county in every
+            state.
+          </li>
+          <li>
+            <em>/api/usa/coronacases/states/:name</em> : This route returns JSON
+            objects for the counties of the state specified in the name
+            parameter.
+            <p>Example: <em>/api/usa/coronacases/states/New York</em></p>
+          </li>
+          <li></li>
         </ul>
       </section>
     </div>
