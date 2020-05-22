@@ -11,14 +11,15 @@ router.get("/", (req, res) => {
 });
 
 // get case stats for a specific state
-router.get("/states/:name", (req, res) => {
+router.get("/states/:state", (req, res) => {
   knex("usa")
     .where({
-      State: req.params.name,
+      State: req.params.state,
     })
     .innerJoin("cases", "usa.uid", "cases.uid")
     .then((items) => res.json(items));
 });
+
 // get stats for specific counties in specific states
 router.get("/states/:state/county/:county", (req, res) => {
   knex("usa")
