@@ -72,7 +72,6 @@ body {
 
 .about ul li {
   margin: 10px 0;
-  /* border-bottom: 1px solid black; */
 }
 
 .about ul li p a {
@@ -80,5 +79,36 @@ body {
 }
 
 .about ul li p a:hover {
+  color: red;
+}
+
+/* Routes Section */
+
+.routes {
+  margin: 20px 0;
+  border: 2px solid black;
+  padding: 10px 10px;
+}
+
+.routes h1 {
+  text-align: center;
+  margin: 10px 0;
+}
+
+.routes ul {
+  list-style: none;
+  margin-top: 10px;
+}
+
+.routes h3 {
+  margin-top: 10px;
+  border-bottom: 2px solid black;
+}
+
+.routes ul li {
+  margin-top: 10px;
+}
+
+.routes ul li em {
   color: red;
 }
