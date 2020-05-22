@@ -72,6 +72,7 @@
           requests:
         </p>
         <h3>Case Routes</h3>
+        <small>Returns information related to confirmed cases</small>
         <ul>
           <li>
             <em>/api/usa/coronacases</em> : This route returns JSON objects for
@@ -86,11 +87,29 @@
           </li>
           <li>
             <em>/api/usa/coronacases/states/:state/county/:county</em> : This
-            routes returns a JSON object of the specified county of the
-            specified state.
+            route returns a JSON object of the specified county of the specified
+            state.
             <p>
               Example:
               <em>/api/usa/coronacases/states/Missouri/county/Boone</em>
+            </p>
+          </li>
+          <li>
+            <em>/api/usa/coronacases/population/:countypopulation</em> : This
+            route returns JSON objects of all U.S. counties that have a
+            population greater than the passed parameter.
+            <p>
+              Example:
+              <em>/api/usa/coronacases/population/150000</em>
+            </p>
+          </li>
+          <li>
+            <em>/api/usa/coronacases/states/:state/:countypopulation</em> : This
+            route returns JSON objects of the counties for the specified state
+            that have a population greater than the passed parameter.
+            <p>
+              Example:
+              <em>/api/usa/coronacases/states/California/120000</em>
             </p>
           </li>
         </ul>
