@@ -31,5 +31,10 @@ app.use(
   "/api/global/coronadeaths",
   require("./routes/deaths/globalDeathRoutes")
 );
+// Routes for Global daily reports
+app.use(
+  "/api/global/dailyreport",
+  require("./routes/dailyReports/globalDailyReportsRoutes")
+);
 
 module.exports = app;
