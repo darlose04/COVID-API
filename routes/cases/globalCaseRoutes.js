@@ -10,4 +10,14 @@ router.get("/", (req, res) => {
     .then((items) => res.json(items));
 });
 
+// get case stats for a specific country
+router.get("/countries/:country", (req, res) => {
+  knex("global")
+    .where({
+      Country: req.params.country,
+    })
+    .innerJoin("global_cases", "global.id", "global_cases.id")
+    .then((items) => res.json(items));
+});
+
 module.exports = router;
