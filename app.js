@@ -12,14 +12,19 @@ app.get("/", (req, res) => {
   res.render("landing");
 });
 
-// Routes for death statistics
-app.use("/api/usa/coronadeaths", require("./routes/deaths/deathRoutes"));
-// Routes for cases statistics
+// US Routes
+// Routes for US cases statistics
 app.use("/api/usa/coronacases", require("./routes/cases/casesRoutes"));
-// Routes for daily report
+// Routes for US death statistics
+app.use("/api/usa/coronadeaths", require("./routes/deaths/deathRoutes"));
+// Routes for US daily report
 app.use(
   "/api/usa/dailyreport",
   require("./routes/dailyReports/dailyReportsRoutes")
 );
+
+// Global Routes
+// Routes for Global cases statistics
+app.use("/api/global/coronacases", require("./routes/cases/globalCaseRoutes"));
 
 module.exports = app;
