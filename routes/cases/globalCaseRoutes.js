@@ -6,7 +6,7 @@ const knex = require("../../config/database");
 router.get("/", (req, res) => {
   knex
     .from("global")
-    .innerJoin("global_cases", "global.id", "global_Cases.id")
+    .innerJoin("global_cases", "global.id", "global_cases.id")
     .then((items) => res.json(items));
 });
 
