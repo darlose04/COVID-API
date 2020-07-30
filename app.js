@@ -26,5 +26,10 @@ app.use(
 // Global Routes
 // Routes for Global cases statistics
 app.use("/api/global/coronacases", require("./routes/cases/globalCaseRoutes"));
+// Routes for Global death statistics
+app.use(
+  "/api/global/coronadeaths",
+  require("./routes/deaths/globalDeathRoutes")
+);
 
 module.exports = app;
