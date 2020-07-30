@@ -112,6 +112,19 @@
               <em>/api/usa/coronacases/states/California/120000</em>
             </p>
           </li>
+          <li>
+            <em>/api/global/coronacases</em> : This route returns JSON objects
+            for each country, as well as objects for each province in some
+            countries.
+          </li>
+          <li>
+            <em>/api/global/coronacases/countries/:country</em> : This route
+            returns JSON objects for the specified country.
+            <p>
+              Example:
+              <em>/api/global/coronacases/countries/Germany</em>
+            </p>
+          </li>
         </ul>
         <h3>Death Routes</h3>
         <small>Returns information related to deaths from COVID-19</small>
@@ -154,6 +167,19 @@
               <em>/api/usa/coronadeaths/states/California/120000</em>
             </p>
           </li>
+          <li>
+            <em>/api/global/coronadeaths</em> : This route returns JSON objects
+            for each country, as well as objects for each province in some
+            countries.
+          </li>
+          <li>
+            <em>/api/global/coronadeaths/countries/:country</em> : This route
+            returns JSON objects for the specified country.
+            <p>
+              Example:
+              <em>/api/global/coronacases/countries/Canada</em>
+            </p>
+          </li>
         </ul>
         <h3>Daily Report Routes</h3>
         <small
@@ -165,6 +191,11 @@
             <em>/api/usa/dailyreport</em> : This route returns JSON objects for
             each U.S. territory and state, providing information that is given
             in daily report CSVs.
+          </li>
+          <li>
+            <em>/api/global/dailyreport</em> : This route returns JSON objects
+            for each country and the associated states/provinces for some
+            countries, providing information that is given in daily report CSVs.
           </li>
         </ul>
       </section>
