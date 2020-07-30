@@ -12,4 +12,14 @@ describe("test route for all death statistics", () => {
 
     done();
   });
+
+  test("all global stats are returned as json", async (done) => {
+    console.log("Entered test...");
+    await api
+      .get("/api/global/coronadeaths")
+      .expect(200)
+      .expect("Content-Type", /application\/json/);
+
+    done();
+  });
 });
